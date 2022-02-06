@@ -1,6 +1,7 @@
 package com.sakthi.springclaimms.controller;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sakthi.springclaimms.entity.Claim;
 import com.sakthi.springclaimms.responseobj.ClaimRespTemplateVO;
 import com.sakthi.springclaimms.service.ClaimService;
@@ -23,6 +24,7 @@ public class ClaimController
 
     @GetMapping("/{id}")
     public ClaimRespTemplateVO getClaimWithPersondetail(@PathVariable("id") Long claimId){
+
 
         return claimService.getClaimwithPersondetail(claimId);
     }
