@@ -34,7 +34,7 @@ public class ClaimService {
         log.info("Calling Microservice");
         //Rest Call to another Microservice
         PersonVO personVO = restTemplate.getForObject("http://localhost:8010/persons/"+claimdetail.getMemberId(),PersonVO.class);
-        
+
         vo.setClaim(claimdetail);
         vo.setPerson(personVO);
 
